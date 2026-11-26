@@ -3,14 +3,10 @@
 O EducaData, desenvolvido por **Kayky Pereira de Araujo** e **Caique Henrique Da Silva Mendonça**, contou com apoio do ChatGPT na explicação de conteúdos de Banco de Dados I, elaboração/revisão de trechos de Java e SQL, planejamento dos arquivos Markdown, organização e redação da apresentação e do relatório. A equipe deve revisar os materiais e verificar os dados antes de publicar.
 
 **Ferramenta:** ChatGPT (OpenAI).  
-**Link público da conversa:** **[PENDENTE — colar link gerado com o recurso Compartilhar do ChatGPT]**.
+**Link público da conversa (informado pela equipe):** https://chatgpt.com/share/6b085b4e-b480-83e8-980f-a24107d7086a
 
-## Como acrescentar
+## Conferência antes da entrega
 
-1. Abra esta conversa no ChatGPT; clique em **Compartilhar** (quando disponível).
-2. Leia a prévia e confira se há conteúdo que não deseja tornar acessível por link.
-3. Crie/copie o link de compartilhamento.
-4. Substitua o marcador acima e o marcador correspondente em `README.md` pelo link real.
-5. Verifique se o link abre sem login antes da entrega.
+O link acima foi fornecido pela equipe e incluído no repositório. Confiram se ele abre sem login em uma janela anônima e se o conteúdo pode ser compartilhado publicamente. A acessibilidade do link não foi verificada automaticamente.
 
 Os comentários de cabeçalho nos arquivos Java indicam a assistência de IA e apontam para esta declaração. Não fornecer um link fictício.
