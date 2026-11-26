@@ -1,0 +1,39 @@
+erDiagram
+    MUNICIPIO ||--o{ ESCOLA : "possui"
+    ESCOLA ||--o{ REGISTRO_ESCOLAR : "tem em cada ano"
+    CENSO ||--o{ REGISTRO_ESCOLAR : "reune"
+    REGISTRO_ESCOLAR ||--o| INFRAESTRUTURA : "descreve"
+
+    MUNICIPIO {
+        INTEGER id_municipio PK
+        TEXT nome
+        TEXT uf
+        TEXT codigo_ibge UK
+    }
+    ESCOLA {
+        INTEGER id_escola PK
+        TEXT codigo_inep UK
+        TEXT nome
+        INTEGER id_municipio FK
+    }
+    CENSO {
+        INTEGER ano_referencia PK
+        TEXT fonte
+        TEXT origem_dados
+    }
+    REGISTRO_ESCOLAR {
+        INTEGER id_registro PK
+        INTEGER id_escola FK
+        INTEGER ano_referencia FK
+        TEXT localizacao
+        TEXT dependencia
+    }
+    INFRAESTRUTURA {
+        INTEGER id_registro PK,FK
+        INTEGER internet
+        INTEGER internet_alunos
+        INTEGER computadores_alunos
+        INTEGER lousa_digital
+        INTEGER projetor
+        INTEGER laboratorio_info
+    }

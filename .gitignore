@@ -1,0 +1,18 @@
+# IntelliJ / Maven / SO
+.idea/
+target/
+*.iml
+.DS_Store
+Thumbs.db
+# Banco local, conteudo bruto volumoso e dados sensiveis
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-journal
+dados_originais/*.zip
+dados_originais/*.csv
+dados_originais/*.xlsx
+codigo_java/dados/inep/*.csv
+codigo_java/dados/*.sqlite
+# Outputs gerados em escala completa; avalie tamanho antes de distribuir
+dados_organizados/completo_*.csv

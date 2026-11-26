@@ -1,0 +1,15 @@
+digraph EducaData {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep=0.6, ranksep=0.72];
+  node [shape=record, fontname="DejaVu Sans", fontsize=11, style="filled,rounded", color="#5c7794", fillcolor="#edf4fa", margin="0.13,0.1"];
+  edge [fontname="DejaVu Sans", fontsize=10, arrowsize=0.8, color="#53718e"];
+  municipio [label="{MUNICÍPIO|PK  id_municipio\lnome\luf\lcodigo_ibge (opcional)\l}"];
+  escola [label="{ESCOLA|PK  id_escola\lcodigo_inep (opcional)\lnome\lFK  id_municipio\l}"];
+  censo [label="{CENSO|PK  ano_referencia\lfonte\lorigem_dados\l}"];
+  registro [label="{REGISTRO ESCOLAR|PK  id_registro\lFK  id_escola\lFK  ano_referencia\llocalizacao\ldependencia\l}"];
+  infraestrutura [label="{INFRAESTRUTURA|PK/FK  id_registro\linternet\linternet_alunos\lcomputadores_alunos\llousa_digital\lprojetor\llaboratorio_info\l}"];
+  municipio -> escola [label="1 : N"];
+  escola -> registro [label="1 : N"];
+  censo -> registro [label="1 : N"];
+  registro -> infraestrutura [label="1 : 0..1\n(exige 1 por registro\nna aplicação)"];
+  {rank=same; escola; censo;}
+}

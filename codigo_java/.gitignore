@@ -1,0 +1,17 @@
+# IntelliJ
+.idea/
+*.iml
+# Maven
+/target/
+# Dados locais criados em execuções do programa
+/dados/educadata.sqlite
+/dados/educadata.sqlite-*
+# Arquivos temporários
+*.log
+.DS_Store
+# Microdados oficiais e banco importado são fornecidos à parte.
+/dados/inep/*.csv
+/dados/inep/*.CSV
+/dados/inep/*.zip
+/dados/educadata_inep2025.sqlite
+/dados/educadata_inep2025.sqlite-*

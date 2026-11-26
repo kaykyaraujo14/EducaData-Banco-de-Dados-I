@@ -1,0 +1,3 @@
+COPIE AQUI o arquivo Tabela_Escola_2025_V2.csv extraído do ZIP oficial do Censo Escolar 2025 do INEP.
+Não coloque o ZIP inteiro: descompacte-o e copie apenas o CSV das escolas.
+Nenhum CSV oficial acompanha este projeto.
