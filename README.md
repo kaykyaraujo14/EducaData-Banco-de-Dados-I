@@ -62,7 +62,7 @@ Kayky Pereira de Araujo e Caique Henrique Da Silva Mendonça realizaram o projet
 
 ## Uso de IA
 
-Parte do código, das explicações e dos materiais de apresentação recebeu apoio do ChatGPT. O professor exige informar o uso de IA no código e inserir um **link público da conversa**. Veja `documentacao/DECLARACAO_USO_IA.md`. O link ainda precisa ser adicionado manualmente, depois de rever a privacidade da conversa.
+Parte do código, das explicações e dos materiais de apresentação recebeu apoio do ChatGPT. O professor exige informar o uso de IA no código e inserir um **link público da conversa**. Veja `documentacao/DECLARACAO_USO_IA.md`. **Link da conversa informado pela equipe:** https://chatgpt.com/share/6b085b4e-b480-83e8-980f-a24107d7086a. Antes da entrega, conferir abertura sem login e privacidade do conteúdo.
 
 ## Como executar
 
@@ -75,7 +75,7 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 ## Pendências para entrega final
 
 - [ ] Conferir variáveis e códigos com o dicionário oficial 2025 baixado.
-- [ ] Colar o link público da conversa no README, declaração e comentários/documentação, conforme exigência.
+- [x] Registrar o link da conversa no README e na declaração de uso de IA (link fornecido pela equipe; acessibilidade sem login ainda precisa ser conferida).
 - [ ] Anexar dados originais e organizados conforme política de tamanho da entrega (ver `dados_originais/COMO_ENTREGAR_DADOS.md`).
 - [ ] Publicar materiais em repositório da equipe, revisar acesso, fazer commit final.
 - [ ] Um integrante responder no Classroom **após** o commit final.
