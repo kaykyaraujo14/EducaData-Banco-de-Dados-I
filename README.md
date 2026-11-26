@@ -21,6 +21,7 @@ Investigar diferenças de infraestrutura tecnológica entre escolas públicas br
 - INEP/MEC — Microdados do Censo Escolar 2025: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
 - Download manual do pacote de 2025, descompactação, leitura do CSV de escolas e importação com `ImportarInep2025.java`.
 - Nome de CSV informado na execução: `Tabela_Escola_2025_V2.csv`.
+- **CSV original disponibilizado para download:** [Tabela_Escola_2025_V2.csv (release v1.0.0)](https://github.com/kaykyaraujo14/EducaData-Banco-de-Dados-I/releases/download/v1.0.0/Tabela_Escola_2025_V2.csv) — aproximadamente 135 MB; [ver página da release](https://github.com/kaykyaraujo14/EducaData-Banco-de-Dados-I/releases/tag/v1.0.0). O arquivo grande está nos ativos da release, fora do histórico Git; isso não altera o projeto no IntelliJ.
 - Recorte do importador: redes públicas municipal, estadual ou federal, em funcionamento.
 - **214.192 linhas processadas; 138.085 escolas incluídas**, conforme o console do projeto. O banco local original não foi disponibilizado aqui para nova auditoria.
 
@@ -52,7 +53,7 @@ Os arquivos `dados_resultados/ranking_estados_2025.csv` e `dados_resultados/rank
 - `modelagem/` — DER e dicionário/mapeamento inicial.
 - `codigo_java/` — Java/Maven, SQLite, SQL e importador.
 - `dados_resultados/` — CSVs agregados dos resultados informados pelo aplicativo.
-- `dados_originais/` — instruções para acrescentar/fornecer o pacote oficial de origem.
+- `dados_originais/` — manifesto, orientações e link para o CSV original publicado na Release v1.0.0.
 - `documentacao/` — fluxo de atividades, responsabilidades, declaração de IA e checklist.
 - `evidencias/` — espaço para capturas reais de execução (não foram inventadas).
 
@@ -75,8 +76,8 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 ## Pendências para entrega final
 
 - [ ] Conferir variáveis e códigos com o dicionário oficial 2025 baixado.
-- [x] Registrar o link da conversa no README e na declaração de uso de IA (link fornecido pela equipe; acessibilidade sem login ainda precisa ser conferida).
-- [ ] Anexar dados originais e organizados conforme política de tamanho da entrega (ver `dados_originais/COMO_ENTREGAR_DADOS.md`).
+- [x] Registrar o link público da conversa no README e na declaração de uso de IA; acesso sem login confirmado pela equipe.
+- [ ] Dados: CSV original disponível na Release v1.0.0; ainda é necessário conferir e entregar o conjunto completo organizado/filtrado, além de validar as variáveis com o dicionário oficial (ver `dados_originais/COMO_ENTREGAR_DADOS.md`).
 - [ ] Publicar materiais em repositório da equipe, revisar acesso, fazer commit final.
 - [ ] Um integrante responder no Classroom **após** o commit final.
 
