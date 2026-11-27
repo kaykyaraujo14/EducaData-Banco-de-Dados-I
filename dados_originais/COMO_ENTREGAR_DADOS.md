@@ -14,15 +14,15 @@ O professor pede cópias dos dados **originais e organizados**. O **CSV original
 
 - Arquivo: [completo_escolas_publicas_2025.csv](../codigo_java/dados_organizados/completo_escolas_publicas_2025.csv)
 - Tamanho confirmado no GitHub: 12.493.274 bytes (aprox. 12 MB).
-- Quantidade informada pela equipe: 138.085 registros.
-- A presença do arquivo foi confirmada; o conteúdo e a contagem não foram auditados independentemente.
+- Quantidade conferida: 138.085 registros únicos.
+- O CSV enviado pela equipe foi lido integralmente e corresponde ao blob no GitHub após normalização CRLF para LF. Os indicadores de conectividade foram recalculados.
 
 ## Conferência final dos dados
 
 1. Conferir que o CSV original na Release corresponde ao baixado do INEP 2025 e registrar a data original de obtenção. O dicionário fornecido foi conferido em 27/11/2026.
 2. O conjunto organizado/filtrado foi exportado a partir de `educadata_inep2025.sqlite`; o script `exportar_dados_organizados.py` está na pasta `codigo_java/tools`.
-3. Compare a quantidade exportada com os 138.085 registros indicados pelo importador.
+3. A quantidade exportada foi comparada e coincide com os 138.085 registros indicados pelo importador.
 4. O conjunto exportado já está publicado no histórico Git e tem cerca de 12 MB. O CSV original maior que 100 MB permanece na Release.
 5. O manifesto registra o conjunto organizado e o registro de validação do dicionário.
 
-**Situação confirmada em 27/11/2026:** ambos os arquivos estão publicados; a conferência documental das variáveis foi realizada; faltam a auditoria do conteúdo dos CSVs e a entrega no Classroom.
+**Situação confirmada em 27/11/2026:** ambos os arquivos estão publicados; a conferência documental das variáveis foi realizada; o CSV organizado foi conferido. A equivalência com o CSV original ainda não foi auditada; falta a entrega no Classroom.

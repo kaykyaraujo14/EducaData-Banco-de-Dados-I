@@ -4,5 +4,5 @@
 - Referência: Censo Escolar 2025, arquivo `Tabela_Escola_2025_V2.csv`; data do download original pelo grupo: **[PENDENTE DE CONFIRMAÇÃO]**.
 - Dados organizados/filtrados: [completo_escolas_publicas_2025.csv](../codigo_java/dados_organizados/completo_escolas_publicas_2025.csv) (12.493.274 bytes; commit `b151e59`).
 - Dicionário fornecido pela equipe: `dicionário_dados_educação_básica.xlsx`; aba `Tabela_de_Escola`; SHA-256 `140e0f3d0df0241330f1c26fd45e516e63bd2ad60fb7ae3c9ae5cb47c6290166`. [Registro da conferência](../codigo_java/docs/CONFERIR_DICIONARIO_OFICIAL.md). O XLSX não está incluído no repositório.
-- Registros após filtro: 138.085 (informado pelo importador; conferir contra exportação)
-- Nota: o CSV original está disponível separadamente como ativo da Release no GitHub. O CSV organizado completo está na branch `main`; a presença foi verificada em 27/11/2026, mas a contagem e a correspondência dos registros ainda exigem conferência local.
+- Registros após filtro: 138.085 (conferido no CSV organizado, sem códigos duplicados)
+- Nota: o CSV original está disponível separadamente como ativo da Release no GitHub. O CSV organizado completo está na branch `main`; a contagem e os indicadores foram conferidos em 27/11/2026. O blob Git normalizado é `e3335f1148eb58691d721aa3f66c21dff3b0adb5`. A equivalência com o CSV original não foi auditada.

@@ -36,13 +36,13 @@ Investigar diferenças de infraestrutura tecnológica entre escolas públicas br
 | Internet para alunos — federal | 699 / 716 = 97,6% |
 | Integridade referencial no aplicativo | OK |
 
-**Não confundir:** internet da escola versus internet para alunos; `NULL` (desconhecido) versus `0` (não). Os percentuais são cálculos do aplicativo sobre dados informados como importados; as definições e categorias das 14 variáveis utilizadas foram conferidas no XLSX fornecido pela equipe; os resultados numéricos ainda exigem auditoria local.
+**Não confundir:** internet da escola versus internet para alunos; `NULL` (desconhecido) versus `0` (não). Os percentuais são cálculos do aplicativo sobre dados informados como importados; as definições e categorias das 14 variáveis utilizadas foram conferidas no XLSX fornecido pela equipe; os resultados numéricos de conectividade foram recalculados sobre o CSV organizado e coincidem com os resultados apresentados.
 
 ## Funcionalidade adicional — solicitação do professor (24/11/2026)
 
 O menu do `AppOficial.java` agora inclui **9 — Ranking por estado (UF)** e **10 — Ranking dos municípios de uma UF**, calculando os maiores percentuais de escolas sem internet em 2025. Na opção 10, a equipe pode escolher `PE`, definir um mínimo de respostas válidas (padrão de 10) e detalhar município por área urbana/rural. O código lê as cinco tabelas existentes e **não exige nova importação**. Veja `codigo_java/docs/NOVAS_CONSULTAS_ESTADOS_MUNICIPIOS.md` e `codigo_java/sql/06_RANKING_ESTADO_MUNICIPIO.sql`.
 
-**Resultados executados em 24/11/2026:** o ranking de estados identificou AC (48,7%), AM (35,8%), AP (33,7%), RR (33,4%) e PA (23,2%) como os cinco maiores percentuais. Pernambuco registrou 238 escolas sem internet em 5.884 (4,0%). No ranking municipal de PE (mínimo de 10 respostas válidas), Manari liderou com 11 de 20 escolas sem internet (55,0%). Nos 27 registros de UF, o total é 9.472 sem internet entre 138.085 escolas, cerca de 6,9%. Os números foram conferidos quanto às somas, mas não auditados diretamente no CSV/SQLite desta etapa. "Mais carente" refere-se **exclusivamente à proporção de escolas sem internet**, não à pobreza da população.
+**Resultados executados em 24/11/2026:** o ranking de estados identificou AC (48,7%), AM (35,8%), AP (33,7%), RR (33,4%) e PA (23,2%) como os cinco maiores percentuais. Pernambuco registrou 238 escolas sem internet em 5.884 (4,0%). No ranking municipal de PE (mínimo de 10 respostas válidas), Manari liderou com 11 de 20 escolas sem internet (55,0%). Nos 27 registros de UF, o total é 9.472 sem internet entre 138.085 escolas, cerca de 6,9%. Os números foram recalculados diretamente no CSV organizado em 27/11/2026 e coincidem com a execução local relatada pela equipe. O SQLite não foi auditado diretamente. "Mais carente" refere-se **exclusivamente à proporção de escolas sem internet**, não à pobreza da população.
 
 Os arquivos `dados_resultados/ranking_estados_2025.csv` e `dados_resultados/ranking_municipios_pe_top5_2025.csv` registram os resultados informados no console. O slide 10 e o Apêndice A do relatório foram atualizados.
 
@@ -52,11 +52,11 @@ Os arquivos `dados_resultados/ranking_estados_2025.csv` e `dados_resultados/rank
 - `relatorio/` — documentação de projeto conceitual e lógico.
 - `modelagem/` — DER e dicionário/mapeamento inicial.
 - `codigo_java/` — Java/Maven, SQLite, SQL e importador.
-- `codigo_java/dados_organizados/` — conjunto completo organizado/filtrado: [completo_escolas_publicas_2025.csv](codigo_java/dados_organizados/completo_escolas_publicas_2025.csv) (12.493.274 bytes; 138.085 registros informados pela equipe).
+- `codigo_java/dados_organizados/` — conjunto completo organizado/filtrado: [completo_escolas_publicas_2025.csv](codigo_java/dados_organizados/completo_escolas_publicas_2025.csv) (12.493.274 bytes; 138.085 registros conferidos).
 - `dados_resultados/` — CSVs agregados dos resultados informados pelo aplicativo.
 - `dados_originais/` — manifesto, orientações e link para o CSV original publicado na Release v1.0.0.
 - `documentacao/` — fluxo de atividades, responsabilidades, declaração de IA e checklist.
-- `evidencias/` — espaço para capturas reais de execução (não foram inventadas).
+- `evidencias/` — registro dos testes reais de execução e da conferência do CSV (ver [validação final](evidencias/VALIDACAO_FINAL.md)).
 
 ## Trabalho em equipe
 
@@ -78,9 +78,10 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 
 - [x] Conferir variáveis e códigos no dicionário 2025 fornecido pela equipe. Veja [registro da validação](codigo_java/docs/CONFERIR_DICIONARIO_OFICIAL.md).
 - [x] Registrar o link público da conversa no README e na declaração de uso de IA; acesso sem login confirmado pela equipe.
-- [x] CSV original publicado na Release v1.0.0 e conjunto organizado publicado na branch `main` (ver `dados_originais/COMO_ENTREGAR_DADOS.md`). A contagem de registros e a equivalência com o original ainda dependem de conferência local.
+- [x] CSV original publicado na Release v1.0.0 e conjunto organizado publicado na branch `main` (ver `dados_originais/COMO_ENTREGAR_DADOS.md`). A contagem e os resultados do CSV organizado foram conferidos; a equivalência com o CSV original do INEP não foi auditada.
 - [x] Materiais publicados no repositório público da equipe; CSV organizado incluído no commit `b151e59`.
-- [ ] Conferir a execução local, a contagem do CSV organizado e realizar eventual commit complementar antes do envio.
+- [x] Conferir a execução local (opções 3, 8, 9 e 10) e a contagem e resultados do CSV organizado. Veja [validação final](evidencias/VALIDACAO_FINAL.md).
+- [ ] Reconfirmar acesso público ao link de IA antes do envio.
 - [ ] Um integrante responder no Classroom **após** o commit final.
 
 **Atenção:** as pendências marcadas não devem ser anunciadas como concluídas até comprovação.
