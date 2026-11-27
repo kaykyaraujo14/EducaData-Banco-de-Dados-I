@@ -8,9 +8,9 @@
 
 ## Abrir o projeto
 
-1. Extraia o ZIP inteiro para uma pasta do computador; não abra apenas o `App.java` dentro do ZIP.
+1. Clone o repositório ou extraia o ZIP completo para uma pasta do computador; não abra apenas o `App.java` dentro do ZIP.
 2. No IntelliJ IDEA, clique **File > Open**.
-3. Selecione a pasta `EducaData_Fase02_IntelliJ` (onde está o arquivo `pom.xml`).
+3. Selecione a pasta `codigo_java` (onde está o arquivo `pom.xml`).
 4. Confirme **Trust Project**, se solicitado.
 5. Configure o **Project SDK** para JDK 17 ou superior em **File > Project Structure > Project**.
 6. Clique em **Load Maven Changes** ou no ícone de recarregar Maven, se necessário. Aguarde a conclusão da resolução das dependências.
@@ -22,7 +22,7 @@
 
 Em **Run > Edit Configurations... > Working directory**, informe a pasta do projeto que contém `pom.xml`. Os scripts são carregados de `src/main/resources`, então devem ser reconhecidos como recursos Maven.
 
-## O que acontece quando executa?
+## O que acontece quando executa App.java (modo de demonstração)?
 
 - O programa cria `dados/educadata.sqlite` automaticamente.
 - Se o banco estiver vazio, ele insere um conjunto de **dados FICTÍCIOS** para exemplificar os recursos.
@@ -34,6 +34,8 @@ Em **Run > Edit Configurations... > Working directory**, informe a pasta do proj
 - Menu 6: cadastra uma escola fictícia e sua infraestrutura, numa transação SQL.
 - Menu 7: lista municípios e IDs.
 - Menu 8: verifica se as chaves estrangeiras estão corretas.
+- Menu 9: ranking de estados por ausência de internet escolar.
+- Menu 10: ranking de municípios por UF e detalhamento urbano/rural.
 
 ## Como começar com um banco vazio?
 
@@ -78,9 +80,9 @@ mvn compile exec:java -Dexec.args="--verificar"
 - `sql/01_estrutura.sql`: esquema do banco.
 - `sql/02_dados_FICTICIOS.sql`: dados exclusivamente para testes.
 - `sql/03_consultas.sql`: consultas SQL para copiar no editor SQL.
-- `dados/educadata_exemplo.sqlite`: banco de demonstração já preenchido, que pode ser aberto em um visualizador SQLite.
+- `dados/educadata.sqlite`: banco de demonstração criado localmente pelo programa; não acompanha o repositório.
 - `docs/DER_diagrama.png`: desenho das cinco tabelas.
 
 ## Muito importante
 
-Os resultados exibidos pelo programa vêm de registros inventados para verificar se o SQL funciona. **NÃO são resultados do Censo Escolar 2025.** Para usar dados do INEP, adapte o programa à base real após baixar e validar o dicionário de variáveis.
+Os resultados de `App.java` sem argumentos são fictícios. Para dados do INEP 2025, use `AppOficial.java` com o SQLite oficial já importado, ou siga [IMPORTAR_DADOS_REAIS.md](IMPORTAR_DADOS_REAIS.md) para criar um banco em uma cópia nova. O sistema oficial já foi executado pela equipe; veja [validação final](../../evidencias/VALIDACAO_FINAL.md).

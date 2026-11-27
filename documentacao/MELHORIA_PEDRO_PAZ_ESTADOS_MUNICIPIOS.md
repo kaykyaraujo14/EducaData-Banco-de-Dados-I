@@ -13,8 +13,8 @@
 2. Use a opção 9 e comente os indicadores por UF.
 3. Use a opção 10 com `PE`, pressione Enter para manter o mínimo 10 e leia o ranking dos municípios pernambucanos.
 4. Selecione um ID para o detalhamento urbano/rural.
-5. Anote os resultados reais e, só então, atualize o slide de resultados, citando o recorte utilizado.
+5. Apresente os resultados registrados em [VALIDACAO_FINAL.md](../evidencias/VALIDACAO_FINAL.md), citando o recorte utilizado.
 
-O termo "município mais carente" refere-se apenas ao **indicador de escolas sem internet**, não a qualquer índice geral de pobreza. O relatório anterior mantém os dados já observados; não foram atribuídos resultados novos sem execução do programa.
+O termo "município mais carente" refere-se apenas ao **indicador de escolas sem internet**, não a qualquer índice geral de pobreza. Os resultados foram registrados após execução pela equipe e estão incorporados aos materiais revisados.
 
 **Integrantes:** Kayky Pereira de Araujo e Caique Henrique Da Silva Mendonça.

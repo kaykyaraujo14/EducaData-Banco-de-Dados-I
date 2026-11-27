@@ -1,7 +1,7 @@
 """Exporta a base organizada do EducaData, sem alterar o SQLite.
 Uso no Windows: python tools/exportar_dados_organizados.py dados/educadata_inep2025.sqlite
 Gera CSV completo na pasta dados_organizados/; evite upload de arquivo grande.
-Apoio de IA: ChatGPT; documentar link em DECLARACAO_USO_IA.md.
+Apoio de IA: ChatGPT; link: https://chatgpt.com/share/6b085b4e-b480-83e8-980f-a24107d7086a
 """
 from pathlib import Path
 import sqlite3,csv,sys

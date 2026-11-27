@@ -11,13 +11,13 @@
 4. Entre nas pastas extraídas e localize **`Tabela_Escola_2025_V2.csv`** (pode estar em `dados/`). Use a **tabela de escolas**, não a de alunos/matrículas.
 5. Copie esse CSV para dentro do seu projeto, na pasta **`dados/inep/`**. O caminho final será:
 
-   `EducaData_Fase02_IntelliJ/dados/inep/Tabela_Escola_2025_V2.csv`
+   `codigo_java/dados/inep/Tabela_Escola_2025_V2.csv`
 
-**Atenção:** este projeto **não** contém o microdado real. O arquivo CSV deverá ser baixado do site do INEP pela equipe. Não renomeie o CSV desnecessariamente.
+**Atenção:** o CSV original não está no histórico Git; pode ser baixado do INEP ou da [Release v1.0.0](https://github.com/kaykyaraujo14/EducaData-Banco-de-Dados-I/releases/tag/v1.0.0). Não renomeie o CSV desnecessariamente.
 
 ## B. Abrir e importar no IntelliJ
 
-1. Abra a pasta `EducaData_Fase02_IntelliJ`, a que contém o `pom.xml`, no IntelliJ.
+1. Abra a pasta `codigo_java`, a que contém o `pom.xml`, no IntelliJ.
 2. Abra `src/main/java/br/edu/cesa/educadata/ImportarInep2025.java`.
 3. Clique no triângulo verde ▶ ao lado de `main()` e selecione **Run 'ImportarInep2025.main()'**.
 4. Se você já copiou o CSV para `dados/inep/`, o programa usa esse arquivo automaticamente. Senão, ele pede o caminho completo: copie o caminho do arquivo (no Windows use **Shift + botão direito > Copiar como caminho**) e cole no console do IntelliJ.
@@ -29,7 +29,7 @@ O programa criará o arquivo **`dados/educadata_inep2025.sqlite`**, separado do 
 
 1. Abra `src/main/java/br/edu/cesa/educadata/AppOficial.java`.
 2. Clique no triângulo verde ▶ ao lado de `main()` e escolha **Run 'AppOficial.main()'**.
-3. Agora você verá o menu normal e poderá escolher **3** para comparar a internet urbana/rural, **4** para rede administrativa, **5** para município e **8** para conferir a integridade.
+3. Agora você verá o menu normal e poderá escolher **3** para comparar a internet urbana/rural, **4** para rede administrativa, **5** para município, **8** para conferir a integridade, **9** para ranking de estados e **10** para ranking de municípios por UF.
 
 **Você NÃO precisa editar as VM options ou os argumentos do programa**: `AppOficial.java` já direciona para a base importada.
 
@@ -80,4 +80,4 @@ Registre em seu relatório:
 
 ## H. Estado observado em novembro de 2026
 
-A equipe informou que o CSV já foi importado com **138.085 escolas públicas ativas** e que o `AppOficial.java` executou as consultas e a opção 8 (integridade OK). Portanto, **não é necessário repetir a importação no computador que já contém `dados/educadata_inep2025.sqlite`**. Este guia continua válido para abrir uma cópia em outro computador. O arquivo real de banco permanece no computador original, não neste ZIP.
+A equipe informou que o CSV já foi importado com **138.085 escolas públicas ativas** e que o `AppOficial.java` executou as consultas e a opção 8 (integridade OK). Portanto, **não é necessário repetir a importação no computador que já contém `dados/educadata_inep2025.sqlite`**. Este guia continua válido para abrir uma cópia em outro computador. O banco permanece no computador original, fora do repositório. Veja [validação final](../../evidencias/VALIDACAO_FINAL.md) e [CSV organizado](../dados_organizados/completo_escolas_publicas_2025.csv).
