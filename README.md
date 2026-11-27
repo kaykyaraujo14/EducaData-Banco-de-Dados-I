@@ -36,7 +36,7 @@ Investigar diferenças de infraestrutura tecnológica entre escolas públicas br
 | Internet para alunos — federal | 699 / 716 = 97,6% |
 | Integridade referencial no aplicativo | OK |
 
-**Não confundir:** internet da escola versus internet para alunos; `NULL` (desconhecido) versus `0` (não). Os percentuais são cálculos do aplicativo sobre dados informados como importados; é necessária conferência com o dicionário oficial da versão baixada.
+**Não confundir:** internet da escola versus internet para alunos; `NULL` (desconhecido) versus `0` (não). Os percentuais são cálculos do aplicativo sobre dados informados como importados; as definições e categorias das 14 variáveis utilizadas foram conferidas no XLSX fornecido pela equipe; os resultados numéricos ainda exigem auditoria local.
 
 ## Funcionalidade adicional — solicitação do professor (24/11/2026)
 
@@ -76,11 +76,11 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 
 ## Pendências para entrega final
 
-- [ ] Conferir variáveis e códigos com o dicionário oficial 2025 baixado.
+- [x] Conferir variáveis e códigos no dicionário 2025 fornecido pela equipe. Veja [registro da validação](codigo_java/docs/CONFERIR_DICIONARIO_OFICIAL.md).
 - [x] Registrar o link público da conversa no README e na declaração de uso de IA; acesso sem login confirmado pela equipe.
 - [x] CSV original publicado na Release v1.0.0 e conjunto organizado publicado na branch `main` (ver `dados_originais/COMO_ENTREGAR_DADOS.md`). A contagem de registros e a equivalência com o original ainda dependem de conferência local.
 - [x] Materiais publicados no repositório público da equipe; CSV organizado incluído no commit `b151e59`.
-- [ ] Conferir a execução local, revisar o dicionário oficial e realizar eventual commit complementar antes do envio.
+- [ ] Conferir a execução local, a contagem do CSV organizado e realizar eventual commit complementar antes do envio.
 - [ ] Um integrante responder no Classroom **após** o commit final.
 
 **Atenção:** as pendências marcadas não devem ser anunciadas como concluídas até comprovação.

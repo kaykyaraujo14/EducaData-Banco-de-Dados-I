@@ -43,7 +43,7 @@ Para continuar utilizando seus registros fictícios, execute o `App.java` como f
 - Colunas opcionais faltantes geram aviso e são armazenadas como `NULL`.
 - Respostas `0` e `1` são preservadas, enquanto vazios e códigos especiais ficam como **desconhecidos (`NULL`)**.
 - O total de computadores para alunos, se ambos os campos estiverem válidos, é a soma de desktops + portáteis; **não inclui tablets**. Valores `88888` (marcação de valor extremo) não entram na soma.
-- **Projetor** fica `NULL`: a variável `IN_EQUIP_MULTIMIDIA` não é necessariamente uma medida idêntica de projetor. Deve-se discutir a correspondência com o dicionário antes de mapear esse campo.
+- **Projetor** fica `NULL` na base existente. O dicionário fornecido confirma que `IN_EQUIP_MULTIMIDIA` representa Projetor Multimídia (Datashow); a variável não foi importada e fica fora da análise principal de conectividade.
 
 O programa lê o CSV por partes, evitando colocar o arquivo inteiro em memória. Em caso de erro SQL, a transação é revertida para evitar dados importados pela metade. Se o arquivo tiver colunas essenciais ausentes, o programa interrompe e avisa quais são.
 

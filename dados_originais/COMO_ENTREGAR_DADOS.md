@@ -19,10 +19,10 @@ O professor pede cópias dos dados **originais e organizados**. O **CSV original
 
 ## Conferência final dos dados
 
-1. Conferir que o CSV original na Release corresponde ao baixado do INEP 2025; registrar a data original de obtenção e o dicionário oficial.
+1. Conferir que o CSV original na Release corresponde ao baixado do INEP 2025 e registrar a data original de obtenção. O dicionário fornecido foi conferido em 27/11/2026.
 2. O conjunto organizado/filtrado foi exportado a partir de `educadata_inep2025.sqlite`; o script `exportar_dados_organizados.py` está na pasta `codigo_java/tools`.
 3. Compare a quantidade exportada com os 138.085 registros indicados pelo importador.
 4. O conjunto exportado já está publicado no histórico Git e tem cerca de 12 MB. O CSV original maior que 100 MB permanece na Release.
-5. Atualize o manifesto de dados com os links do conjunto organizado e do dicionário usado na validação.
+5. O manifesto registra o conjunto organizado e o registro de validação do dicionário.
 
-**Situação confirmada em 27/11/2026:** ambos os arquivos estão publicados; faltam a conferência de conteúdo, a validação do dicionário oficial e a entrega no Classroom.
+**Situação confirmada em 27/11/2026:** ambos os arquivos estão publicados; a conferência documental das variáveis foi realizada; faltam a auditoria do conteúdo dos CSVs e a entrega no Classroom.

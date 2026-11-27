@@ -1,6 +1,6 @@
 # Dicionário: mapeamento do CSV INEP 2025 → EducaData
 
-**Escopo do importador:** arquivo `Tabela_Escola_2025_V2.csv`, escolas públicas em funcionamento. Os nomes das colunas esperadas deverão ser conferidos com o dicionário da versão baixada. O conteúdo da base não acompanha o projeto.
+**Escopo do importador:** arquivo `Tabela_Escola_2025_V2.csv`, escolas públicas em funcionamento. Os nomes e categorias das 14 variáveis utilizadas foram conferidos no XLSX fornecido pela equipe em 27/11/2026. O banco SQLite local não acompanha o projeto.
 
 | Coluna CSV | Tabela/atributo | Tratamento |
 |---|---|---|
@@ -18,11 +18,11 @@
 | `QT_COMP_PORTATIL_ALUNO` | `infraestrutura.computadores_alunos` | Se um componente não for válido, o total é `NULL` |
 | `IN_EQUIP_LOUSA_DIGITAL` | `infraestrutura.lousa_digital` | `1` sim, `0` não, outros `NULL` |
 | `IN_LABORATORIO_INFORMATICA` | `infraestrutura.laboratorio_info` | `1` sim, `0` não, outros `NULL` |
-| — | `infraestrutura.projetor` | Não preenchido: requer mapeamento conceitual exato |
+| `IN_EQUIP_MULTIMIDIA` (não importado) | `infraestrutura.projetor` | Dicionário confirma projetor Datashow; permanece NULL na base existente |
 
-**Regras:** `NULL` não equivale a `0`; uma linha é rejeitada quando faltar identificador, município, UF, localização ou nome; códigos de escola duplicados são rejeitados; porcentagens usam apenas respostas válidas. O campo `computadores_alunos` não representa todos os dispositivos digitais (tablets não são somados). Se `QT_DESKTOP_ALUNO`/`QT_COMP_PORTATIL_ALUNO` tiver marcador `88888` ou outro valor extremo, será tratado como desconhecido. Confirme as regras na edição do dicionário oficial do arquivo efetivamente baixado.
+**Regras:** `NULL` não equivale a `0`; uma linha é rejeitada quando faltar identificador, município, UF, localização ou nome; códigos de escola duplicados são rejeitados; porcentagens usam apenas respostas válidas. O campo `computadores_alunos` não representa todos os dispositivos digitais (tablets não são somados). Se `QT_DESKTOP_ALUNO`/`QT_COMP_PORTATIL_ALUNO` tiver marcador `88888` ou outro valor extremo, será tratado como desconhecido. A conferência documental confirma as categorias 0/1 e o marcador 88888; os demais tratamentos conservadores são decisões do projeto.
 
 **Qualidade da informação:** o importador confere nomes de colunas, valores esperados e FKs, mas **não comprova a autenticidade do arquivo CSV**. Essa conferência é responsabilidade da equipe por meio da origem e, se disponível, dos checksums divulgados pelo INEP.
 
 
-> **Status da revisão (23/11/2026):** a existência das colunas é verificada pelo importador, mas as definições detalhadas, os códigos de respostas especiais e a interpretação de cada indicador **ainda não foram auditados contra o arquivo XLSX de dicionário da edição V2 que está no computador da equipe**. Este é um mapeamento de implementação, não uma certificação oficial dos significados. Consulte `docs/CONFERIR_DICIONARIO_OFICIAL.md`.
+> **Status da revisão (27/11/2026):** conferência documental concluída para as 14 variáveis usadas. Consulte o [registro da validação](CONFERIR_DICIONARIO_OFICIAL.md). A auditoria dos CSVs e a execução local ainda estão pendentes.

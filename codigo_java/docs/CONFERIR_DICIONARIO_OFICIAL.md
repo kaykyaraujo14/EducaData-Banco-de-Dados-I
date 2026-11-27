@@ -1,32 +1,32 @@
-# Conferência das variáveis do Censo Escolar 2025 — checklist
+# Conferência do dicionário de dados — Censo Escolar 2025
 
-**Situação atual:** documentação preparada, **conferência final do XLSX oficial pendente**. Não declarar validada sem comparar o dicionário que veio no ZIP do INEP.
+Conferência realizada em 27/11/2026, comparando o arquivo `dicionário_dados_educação_básica.xlsx` fornecido pela equipe com o importador `ImportarInep2025.java`.
 
-## Como conferir (sem mudar o código agora)
+- Aba: `Tabela_de_Escola`; cabeçalhos nas linhas 7–8; coluna Y = coleta em 2025. Todas as 14 variáveis usadas pelo importador estão marcadas com “s” nessa coluna.
+- SHA-256 do XLSX fornecido: `140e0f3d0df0241330f1c26fd45e516e63bd2ad60fb7ae3c9ae5cb47c6290166`.
+- Fonte institucional: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
 
-1. No ZIP original do INEP 2025 V2, encontre o arquivo de **dicionário de dados** (`.xlsx`). Abra-o no Excel ou LibreOffice Calc.
-2. Na tabela de **escolas**, procure as colunas listadas abaixo, uma por vez.
-3. Para cada coluna, registre no quadro: nome exato, definição textual oficial, códigos válidos (1/0/9 etc.), se a coluna é obrigatória, tratamento de branco / não aplicável, e página/aba/linha do dicionário.
-4. Confira se os filtros do importador (`TP_SITUACAO_FUNCIONAMENTO=1` e `TP_DEPENDENCIA` entre 1 e 3) correspondem à população descrita como “escolas públicas em funcionamento”.
-5. Confira se `IN_INTERNET` significa presença de acesso na escola e `IN_INTERNET_ALUNOS` significa acesso **para alunos**, e se há restrições no preenchimento destes indicadores.
-6. Confira se `QT_DESKTOP_ALUNO` e `QT_COMP_PORTATIL_ALUNO` representam contagens somáveis e se `88888` é de fato código especial nesse campo e nessa edição. O projeto **não soma tablets**.
-7. Confira `IN_EQUIP_LOUSA_DIGITAL` e `IN_LABORATORIO_INFORMATICA`. O indicador `projetor` foi deixado `NULL` deliberadamente, porque ainda não há correspondência inequívoca.
-8. Registre a fonte do arquivo original (URL, nome e data de download), seu tamanho/hash se possível. Salve capturas das saídas de consultas.
+| Variável | Linha | Definição/categoria | Tratamento no importador |
+|---|---:|---|---|
+| SG_UF | 14 | Sigla da UF, Char(2) | Texto |
+| NO_MUNICIPIO | 16 | Nome do município, Char(150) | Texto |
+| CO_MUNICIPIO | 17 | Código do município, Num(7) | Identificador textual |
+| NO_ENTIDADE | 32 | Nome da escola, Char(100) | Texto |
+| CO_ENTIDADE | 33 | Código da escola, Num(8) | Identificador textual |
+| TP_DEPENDENCIA | 35 | 1 federal; 2 estadual; 3 municipal; 4 privada | Inclui 1–3 |
+| TP_LOCALIZACAO | 37 | 1 urbana; 2 rural | Mapeia ambos |
+| TP_SITUACAO_FUNCIONAMENTO | 48 | 1 em atividade; 2 paralisada; 3 extinta no ano; 4 extinta anteriormente | Inclui apenas 1 |
+| IN_LABORATORIO_INFORMATICA | 157 | Laboratório de informática existente e utilizado; 0 não, 1 sim | Preserva 0/1 |
+| IN_EQUIP_LOUSA_DIGITAL | 214 | Lousa digital existente para ensino e aprendizagem; 0 não, 1 sim | Preserva 0/1 |
+| QT_DESKTOP_ALUNO | 232 | Quantidade de computadores de mesa em uso pelos alunos; 88888 = valor extremo | Exclui marcador e soma quando ambos os campos são válidos |
+| QT_COMP_PORTATIL_ALUNO | 234 | Quantidade de computadores portáteis em uso pelos alunos; 88888 = valor extremo | Mesmo tratamento |
+| IN_INTERNET | 239 | Acesso à internet; 0 não, 1 sim | Preserva 0/1 |
+| IN_INTERNET_ALUNOS | 240 | Internet para uso dos alunos; 0 não, 1 sim | Preserva 0/1 |
 
-| Variável original | Campo usado | Definição e códigos conferidos no XLSX? |
-|---|---|---|
-| `CO_MUNICIPIO`, `NO_MUNICIPIO`, `SG_UF` | município | Pendente |
-| `CO_ENTIDADE`, `NO_ENTIDADE` | escola | Pendente |
-| `TP_SITUACAO_FUNCIONAMENTO` | filtro: ativa | Pendente |
-| `TP_DEPENDENCIA` | filtro / rede | Pendente |
-| `TP_LOCALIZACAO` | área urbana/rural | Pendente |
-| `IN_INTERNET` | internet na escola | Pendente |
-| `IN_INTERNET_ALUNOS` | internet para alunos | Pendente |
-| `QT_DESKTOP_ALUNO` | desktops para alunos | Pendente |
-| `QT_COMP_PORTATIL_ALUNO` | portáteis para alunos | Pendente |
-| `IN_EQUIP_LOUSA_DIGITAL` | lousa digital | Pendente |
-| `IN_LABORATORIO_INFORMATICA` | laboratório | Pendente |
+## Decisões e limitações
 
-**Critério de conclusão:** só marque “conferido” depois de localizar a definição e os códigos na planilha oficial. Em caso de divergência, ajuste a transformação, recrie a base em uma **cópia** e execute as consultas novamente. Nunca sobrescreva o banco original sem backup.
+- O dicionário confirma os filtros, os nomes e as categorias acima. Não estabelece nessas linhas que 9 ou branco equivalem a “não”; o projeto trata valores fora de 0/1 como NULL, por precaução. A lista de colunas obrigatórias/opcionais é uma decisão do importador, não uma declaração de obrigatoriedade do INEP.
+- O marcador 88888 é explicitamente documentado nas duas quantidades. O limite de valores menores que 88888 é uma regra conservadora do código, não um intervalo válido completo declarado pelo INEP. O indicador soma desktops e portáteis; não inclui tablets (linha 236).
+- A linha 216 identifica IN_EQUIP_MULTIMIDIA como Projetor Multimídia (Datashow), 0 não, 1 sim, coletado em 2025. A base existente não importou esse campo e mantém projetor como NULL. Essa limitação é mantida para preservar a base já produzida; o campo não integra as análises principais de conectividade. Uma eventual inclusão requer nova validação dos dados e reexportação.
+- A conferência documental foi concluída para as variáveis utilizadas. Não foram auditados o conteúdo completo do CSV, a contagem de registros, o banco SQLite, a execução local nem a identidade byte a byte do XLSX com o pacote V2 publicado. O arquivo XLSX foi fornecido pela equipe; a origem institucional não foi certificada independentemente.
 
-Fonte institucional: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar

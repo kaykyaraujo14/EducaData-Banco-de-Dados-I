@@ -21,13 +21,13 @@
 - [x] Link público de conversa com IA registrado no README e na declaração de uso de IA. Confirmar abertura sem login antes da entrega.
 - [x] CSV original publicado na Release v1.0.0 e CSV organizado completo publicado em `codigo_java/dados_organizados/completo_escolas_publicas_2025.csv` (12.493.274 bytes); conferência de conteúdo e contagem ainda local.
 - [x] Cópia de slides em PDF.
-- [ ] Validação final com o dicionário oficial do INEP (depende do arquivo local).
+- [x] Conferência documental das 14 variáveis do importador com o XLSX fornecido pela equipe; ver [registro da validação](../codigo_java/docs/CONFERIR_DICIONARIO_OFICIAL.md).
 
 ## Envio
 
 - [x] Arquivos publicados no GitHub público da equipe; conferidos em 27/11/2026.
 - [x] Commit de publicação dos dados organizados confirmado: `b151e59`.
-- [ ] Revisão final do dicionário, execução local e eventual commit complementar.
+- [ ] Execução local, conferência da contagem do CSV organizado e eventual commit complementar.
 - [ ] Um integrante respondeu ao Classroom depois do commit.
 
 **Não marcar uma pendência como concluída só porque existe roteiro para realizá-la.**

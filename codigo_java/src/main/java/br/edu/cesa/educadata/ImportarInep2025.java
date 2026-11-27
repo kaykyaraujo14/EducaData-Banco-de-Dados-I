@@ -217,8 +217,8 @@ public final class ImportarInep2025 {
                     inteiroNulo(infra, 3, booleano(linha, colunas, "IN_INTERNET_ALUNOS"));
                     inteiroNulo(infra, 4, computadores(linha, colunas));
                     inteiroNulo(infra, 5, booleano(linha, colunas, "IN_EQUIP_LOUSA_DIGITAL"));
-                    // IN_EQUIP_MULTIMIDIA não equivale necessariamente a projetor;
-                    // por rigor conceitual este atributo fica como desconhecido.
+                    // O dicionário de 2025 identifica IN_EQUIP_MULTIMIDIA como projetor Datashow.
+                    // A versão atual mantém o campo NULL para preservar o recorte existente.
                     infra.setNull(6, Types.INTEGER);
                     inteiroNulo(infra, 7, booleano(linha, colunas, "IN_LABORATORIO_INFORMATICA"));
                     infra.executeUpdate();
