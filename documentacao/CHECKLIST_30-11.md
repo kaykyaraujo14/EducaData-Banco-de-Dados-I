@@ -18,7 +18,7 @@
 - [x] Markdown: README, fluxo e responsabilidades compartilhadas; reuniões não documentadas, sem inventar.
 - [x] Código Java, SQL comentados e importador.
 - [x] Declaração de IA nos comentários e arquivo Markdown.
-- [x] Link público de conversa com IA registrado no README e na declaração de uso de IA. Confirmar abertura sem login antes da entrega.
+- [x] Link público de conversa com IA registrado no README e na declaração de uso de IA. Abertura confirmada pela equipe no teste final.
 - [x] CSV original publicado na Release v1.0.0 e CSV organizado completo publicado em `codigo_java/dados_organizados/completo_escolas_publicas_2025.csv` (12.493.274 bytes); 138.085 registros únicos conferidos; resultados de conectividade recalculados.
 - [x] Cópia de slides em PDF.
 - [x] Conferência documental das 14 variáveis do importador com o XLSX fornecido pela equipe; ver [registro da validação](../codigo_java/docs/CONFERIR_DICIONARIO_OFICIAL.md).
@@ -28,7 +28,7 @@
 - [x] Arquivos publicados no GitHub público da equipe; conferidos em 27/11/2026.
 - [x] Commit de publicação dos dados organizados confirmado: `b151e59`.
 - [x] Execução local das opções 3, 8, 9 e 10 e conferência do CSV organizado (ver [validação final](../evidencias/VALIDACAO_FINAL.md)).
-- [ ] Reconfirmar acesso público ao link de IA.
+- [x] Acesso ao link de IA reconfirmado pela equipe.
 - [ ] Um integrante respondeu ao Classroom depois do commit.
 
 **Não marcar uma pendência como concluída só porque existe roteiro para realizá-la.**

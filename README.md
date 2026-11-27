@@ -64,7 +64,7 @@ Kayky Pereira de Araujo e Caique Henrique Da Silva Mendonça realizaram o projet
 
 ## Uso de IA
 
-Parte do código, das explicações e dos materiais de apresentação recebeu apoio do ChatGPT. O professor exige informar o uso de IA no código e inserir um **link público da conversa**. Veja `documentacao/DECLARACAO_USO_IA.md`. **Link da conversa informado pela equipe:** https://chatgpt.com/share/6b085b4e-b480-83e8-980f-a24107d7086a. Antes da entrega, conferir abertura sem login e privacidade do conteúdo.
+Parte do código, das explicações e dos materiais de apresentação recebeu apoio do ChatGPT. O professor exige informar o uso de IA no código e inserir um **link público da conversa**. Veja `documentacao/DECLARACAO_USO_IA.md`. **Link da conversa informado pela equipe:** https://chatgpt.com/share/6b085b4e-b480-83e8-980f-a24107d7086a. A equipe confirmou a abertura do link no teste final; a conferência de privacidade permanece sob responsabilidade da equipe.
 
 ## Como executar
 
@@ -81,7 +81,7 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 - [x] CSV original publicado na Release v1.0.0 e conjunto organizado publicado na branch `main` (ver `dados_originais/COMO_ENTREGAR_DADOS.md`). A contagem e os resultados do CSV organizado foram conferidos; a equivalência com o CSV original do INEP não foi auditada.
 - [x] Materiais publicados no repositório público da equipe; CSV organizado incluído no commit `b151e59`.
 - [x] Conferir a execução local (opções 3, 8, 9 e 10) e a contagem e resultados do CSV organizado. Veja [validação final](evidencias/VALIDACAO_FINAL.md).
-- [ ] Reconfirmar acesso público ao link de IA antes do envio.
+- [x] Acesso ao link de IA reconfirmado pela equipe no teste final.
 - [ ] Um integrante responder no Classroom **após** o commit final.
 
 **Atenção:** as pendências marcadas não devem ser anunciadas como concluídas até comprovação.

@@ -7,6 +7,6 @@ O EducaData, desenvolvido por **Kayky Pereira de Araujo** e **Caique Henrique Da
 
 ## Conferência antes da entrega
 
-O link acima foi fornecido pela equipe e incluído no repositório. Confiram se ele abre sem login em uma janela anônima e se o conteúdo pode ser compartilhado publicamente. A acessibilidade do link não foi verificada automaticamente.
+O link acima foi fornecido pela equipe e incluído no repositório. A equipe confirmou que o link está funcionando após a orientação de teste em janela anônima. A confirmação é da equipe, não de uma verificação automática; a revisão de privacidade permanece sob responsabilidade dos integrantes.
 
 Os comentários de cabeçalho nos arquivos Java indicam a assistência de IA e apontam para esta declaração. Não fornecer um link fictício.

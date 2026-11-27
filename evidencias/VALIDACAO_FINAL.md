@@ -24,4 +24,4 @@ Data: 27/11/2026. Fontes: capturas reais e saídas de console fornecidas pela eq
 
 ## Limitações
 
-Os resultados do console foram fornecidos pela equipe, não executados diretamente pelo assistente. A base SQLite não foi inspecionada diretamente e o CSV original do INEP não foi comparado linha a linha. A auditoria confirma a consistência do CSV organizado com os resultados do projeto, não a autenticidade de origem. Não foram publicadas capturas contendo caminhos locais. O acesso anônimo ao link da IA e a entrega no Classroom dependem da equipe.
+Os resultados do console foram fornecidos pela equipe, não executados diretamente pelo assistente. A base SQLite não foi inspecionada diretamente e o CSV original do INEP não foi comparado linha a linha. A auditoria confirma a consistência do CSV organizado com os resultados do projeto, não a autenticidade de origem. Não foram publicadas capturas contendo caminhos locais. A equipe confirmou o funcionamento do link de IA após a orientação de teste em janela anônima. A entrega no Classroom ainda depende da equipe.
