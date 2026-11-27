@@ -52,6 +52,7 @@ Os arquivos `dados_resultados/ranking_estados_2025.csv` e `dados_resultados/rank
 - `relatorio/` — documentação de projeto conceitual e lógico.
 - `modelagem/` — DER e dicionário/mapeamento inicial.
 - `codigo_java/` — Java/Maven, SQLite, SQL e importador.
+- `codigo_java/dados_organizados/` — conjunto completo organizado/filtrado: [completo_escolas_publicas_2025.csv](codigo_java/dados_organizados/completo_escolas_publicas_2025.csv) (12.493.274 bytes; 138.085 registros informados pela equipe).
 - `dados_resultados/` — CSVs agregados dos resultados informados pelo aplicativo.
 - `dados_originais/` — manifesto, orientações e link para o CSV original publicado na Release v1.0.0.
 - `documentacao/` — fluxo de atividades, responsabilidades, declaração de IA e checklist.
@@ -77,8 +78,9 @@ Parte do código, das explicações e dos materiais de apresentação recebeu ap
 
 - [ ] Conferir variáveis e códigos com o dicionário oficial 2025 baixado.
 - [x] Registrar o link público da conversa no README e na declaração de uso de IA; acesso sem login confirmado pela equipe.
-- [ ] Dados: CSV original disponível na Release v1.0.0; ainda é necessário conferir e entregar o conjunto completo organizado/filtrado, além de validar as variáveis com o dicionário oficial (ver `dados_originais/COMO_ENTREGAR_DADOS.md`).
-- [ ] Publicar materiais em repositório da equipe, revisar acesso, fazer commit final.
+- [x] CSV original publicado na Release v1.0.0 e conjunto organizado publicado na branch `main` (ver `dados_originais/COMO_ENTREGAR_DADOS.md`). A contagem de registros e a equivalência com o original ainda dependem de conferência local.
+- [x] Materiais publicados no repositório público da equipe; CSV organizado incluído no commit `b151e59`.
+- [ ] Conferir a execução local, revisar o dicionário oficial e realizar eventual commit complementar antes do envio.
 - [ ] Um integrante responder no Classroom **após** o commit final.
 
 **Atenção:** as pendências marcadas não devem ser anunciadas como concluídas até comprovação.
